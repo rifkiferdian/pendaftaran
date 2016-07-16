@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ## Sample CodeIgniter
 
 This is a very simple CRUD-like CodeIgniter project. It is similar to what you might find as a tutorial project on the [CI website][http://ellislab.com/codeigniter/user-guide/tutorial/index.html], or on [Nettuts][http://net.tutsplus.com/sessions/codeigniter-from-scratch/].  
@@ -11,3 +12,6 @@ Check out the files into "ci\_sock" subdirectory of your webroot. Import the cis
 The login info for user 1 is:
 login: admin@example.com
 pass:  password
+=======
+# pendaftaran
+>>>>>>> 5780bead950ffa46a10e231efcd928e33d34f525
