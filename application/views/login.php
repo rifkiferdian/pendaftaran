@@ -1,42 +1,109 @@
-<?php include 'header.php' ?>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!-- Meta, title, CSS, favicons, etc. -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <div class="container">
+    <title>Gentellela Alela! | </title>
 
-    <div class="row">
-      <div class="span4 offset4 well">
+    <!-- Bootstrap -->
+    <link href="<?php echo base_url();?>assets/template/vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="<?php echo base_url();?>assets/template/vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <!-- NProgress -->
+    <link href="<?php echo base_url();?>assets/template/vendors/nprogress/nprogress.css" rel="stylesheet">
+    <!-- Animate.css -->
+    <link href="https://colorlib.com/polygon/gentelella/css/animate.min.css" rel="stylesheet">
 
-        <legend>Please Sign In</legend>
+    <!-- Custom Theme Style -->
+    <link href="<?php echo base_url();?>assets/template/build/css/custom.min.css" rel="stylesheet">
+  </head>
 
+  <body class="login">
+    <div>
+      <a class="hiddenanchor" id="signup"></a>
+      <a class="hiddenanchor" id="signin"></a>
+
+      <div class="login_wrapper">
+        <div class="animate form login_form">
         <?php if (isset($error) && $error): ?>
           <div class="alert alert-error">
             <a class="close" data-dismiss="alert" href="#">×</a>Incorrect Username or Password!
           </div>
         <?php endif; ?>
+          <section class="login_content">
+            <?php echo form_open('login/login_user') ?>
+              <h1>Login Form</h1>
+              <div>
+                <input type="text" class="form-control" placeholder="Username" name="email" required="" />
+              </div>
+              <div>
+                <input type="password" class="form-control" placeholder="Password" name="password" required="" />
+              </div>
+              <div>
+                <!-- <a class="btn btn-default submit">Log in</a> -->
+                <button type="submit" name="submit" class="btn btn-default">Sign in</button>
+                <a class="reset_pass" href="#">Lost your password?</a>
+              </div>
 
-        <?php echo form_open('login/login_user') ?>
+              <div class="clearfix"></div>
 
-        <input type="text" id="email" class="span4" name="email" placeholder="Email Address">
-        <input type="password" id="password" class="span4" name="password" placeholder="Password">
+              <div class="separator">
+                <p class="change_link">New to site?
+                  <a href="#signup" class="to_register"> Create Account </a>
+                </p>
 
-        <!--<label class="checkbox">
-          <input type="checkbox" name="remember" value="1"> Remember Me
-        </label>-->
+                <div class="clearfix"></div>
+                <br />
 
-        <button type="submit" name="submit" class="btn btn-info btn-block">Sign in</button>
+                <div>
+                  <h1><i class="fa fa-paw"></i> Gentelella Alela!</h1>
+                  <p>©2016 All Rights Reserved. Gentelella Alela! is a Bootstrap 3 template. Privacy and Terms</p>
+                </div>
+              </div>
+            </form>
+          </section>
+        </div>
 
-        </form>
+        <div id="register" class="animate form registration_form">
+          <section class="login_content">
+            <form>
+              <h1>Create Account</h1>
+              <div>
+                <input type="text" class="form-control" placeholder="Username" required="" />
+              </div>
+              <div>
+                <input type="email" class="form-control" placeholder="Email" required="" />
+              </div>
+              <div>
+                <input type="password" class="form-control" placeholder="Password" required="" />
+              </div>
+              <div>
+                <a class="btn btn-default submit" href="index.html">Submit</a>
+              </div>
+
+              <div class="clearfix"></div>
+
+              <div class="separator">
+                <p class="change_link">Already a member ?
+                  <a href="#signin" class="to_register"> Log in </a>
+                </p>
+
+                <div class="clearfix"></div>
+                <br />
+
+                <div>
+                  <h1><i class="fa fa-paw"></i> Gentelella Alela!</h1>
+                  <p>©2016 All Rights Reserved. Gentelella Alela! is a Bootstrap 3 template. Privacy and Terms</p>
+                </div>
+              </div>
+            </form>
+          </section>
+        </div>
       </div>
     </div>
-
-    <div class="row">
-      <div class="span6 offset4">
-        <p><strong>Admin user email:</strong> admin@example.com</p>
-        <p><strong>Team 1 user email:</strong> bb@example.com</p>
-        <p><strong>Team 2 user email:</strong> jj@example.com</p>
-        <p>The password for each user is 'password'</p>
-        <p>The database is reset every night.</p>
-      </div>
-    </div>
-  </div>
-
-<?php include 'footer.php' ?>
+  </body>
+</html>
